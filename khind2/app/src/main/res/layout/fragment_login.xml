@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragmentActivity1.Login">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:id="@+id/dh"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/khindblack"
+            />
+        <!--Lightning Warning-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/lw"
+            tools:ignore="MissingConstraints"
+            android:text="Ligthning Warning"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@id/dh">
+        </TextView>
+
+        <!--email-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/email"
+            tools:ignore="MissingConstraints"
+            android:text="Email"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintTop_toBottomOf="@id/lw"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="30dp">
+        </TextView>
+
+        <!--username-->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/username"
+            android:background="@drawable/username_background"
+            tools:ignore="MissingConstraints"
+            android:textColor="#141414"
+            android:inputType="text"
+            android:textSize="20dp"
+            android:hint="e.g.user@gmail.com"
+            app:layout_constraintTop_toBottomOf="@id/email"
+            android:padding="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp">
+        </EditText>
+
+        <!--password-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/password"
+            tools:ignore="MissingConstraints"
+            android:text="Password"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintTop_toBottomOf="@id/username"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="30dp">
+        </TextView>
+
+        <!--input password-->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/input_password"
+            android:background="@drawable/username_background"
+            tools:ignore="MissingConstraints"
+            android:textColor="#141414"
+            android:inputType="text"
+            android:textSize="20dp"
+            android:hint="enter password"
+            app:layout_constraintTop_toBottomOf="@id/password"
+            android:padding="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp">
+        </EditText>
+
+        <!--login-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/login"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintTop_toBottomOf="@id/input_password"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="25dp"
+            android:textSize="20dp"
+            android:text="Login"
+            android:textColor="#ffffff"
+            android:backgroundTint="@color/black"
+            android:padding="20dp">
+        </Button>
+
+        <!--forgot password-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/forgot_password"
+            tools:ignore="MissingConstraints"
+            android:text="@string/forgot_password"
+            android:textColor="#505050"
+            android:gravity="center"
+            android:textSize="18dp"
+            app:layout_constraintTop_toBottomOf="@id/login"
+            android:layout_marginTop="20dp">
+        </TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
