@@ -40,7 +40,7 @@ class Alerts : Fragment() {
         listview.isClickable = true
         listview?.adapter = AlertsAdapter(requireContext(),R.layout.row_alerts,list)
         listview.setOnItemClickListener { parent, view, position, id ->
-            val time = list[0].time
+            val time = list[position].time
 
             val intent = Intent(requireContext(), DetailsActivity::class.java)
             intent.putExtra("time", time)
