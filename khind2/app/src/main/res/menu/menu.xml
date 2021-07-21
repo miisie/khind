@@ -6,7 +6,7 @@
         android:title="Status"/>
     <item
         android:id="@+id/lightningmap"
-        android:icon="@drawable/ic_ellipse_2_1"
+        android:icon="@drawable/ic_ellipse_2"
         android:title="Lightning Map"/>
 
     <item

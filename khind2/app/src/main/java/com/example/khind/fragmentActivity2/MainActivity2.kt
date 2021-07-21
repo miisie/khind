@@ -6,19 +6,27 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.example.khind.R
-import com.example.khind.fragmentActivity1.WaitingScreen
+import com.example.khind.fragmentActivity2.bottom_nav.Dashboard
 
 class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
-        addFragmentToActivity(supportFragmentManager, DashBoard(), R.id.frame_layout_id2)
+        addFragmentToActivity(supportFragmentManager, Dashboard(), R.id.frame_layout_id2)
+
     }
     private fun addFragmentToActivity(manager: FragmentManager, fragment: Fragment?, frameId: Int) {
         val transaction: FragmentTransaction = manager.beginTransaction()
         if (fragment != null) {
             transaction.add(frameId, fragment)
-            transaction.addToBackStack(null)
+            transaction.addToBackStack("Dashboard")
+        }
+        transaction.commit()
+    }
+    private fun replaceFragment(manager: FragmentManager, fragment: Fragment?, frameId: Int) {
+        val transaction: FragmentTransaction = manager.beginTransaction()
+        if(fragment != null) {
+            transaction.replace(frameId, fragment)
         }
         transaction.commit()
     }
