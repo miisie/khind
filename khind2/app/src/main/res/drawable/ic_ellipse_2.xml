@@ -27,6 +27,7 @@
       android:left="3dp"
       android:right="3dp"
       android:top="3dp" />
+  <solid android:color="@color/white"/>
   <size
       android:width="12dp"
       android:height="12dp" />
@@ -36,8 +37,6 @@
 </shape>
 </item>
 
-
-
 <item>
 <shape android:shape="oval">
   <padding
@@ -45,6 +44,7 @@
       android:left="1dp"
       android:right="1dp"
       android:top="1dp" />
+  <solid android:color="@color/white"/>
   <size
       android:width="10dp"
       android:height="10dp" />

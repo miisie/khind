@@ -7,9 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import com.example.khind.R
-import com.example.khind.fragmentActivity2.bottom_nav.History
-import com.example.khind.fragmentActivity2.bottom_nav.LightningMap
-import com.example.khind.fragmentActivity2.bottom_nav.Status
+import com.example.khind.fragmentActivity2.bottom_nav.status.Status
 import com.example.khind.fragmentActivity2.notification.Notifications
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -43,7 +41,7 @@ class Dashboard : Fragment() {
         notification.setOnClickListener {
             val fragmentTransaction= fragmentManager?.beginTransaction()
             fragmentTransaction?.replace(R.id.frame_layout_id2, Notifications())
-            fragmentTransaction?.addToBackStack(null)
+            fragmentTransaction?.addToBackStack("Dashboard")
             fragmentTransaction?.commit()
         }
         bottom_navigation.setOnNavigationItemSelectedListener{

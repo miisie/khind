@@ -6,18 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ListView
 import com.example.khind.R
-import com.example.khind.fragmentActivity2.bottom_nav.Status
-import com.example.khind.fragmentActivity2.notification.messages.Messages
-import com.example.khind.fragmentActivity2.notification.messages.MessagesAdapter
-import com.example.khind.fragmentActivity2.notification.messages.Model
-import okhttp3.internal.Internal
+import com.example.khind.fragmentActivity2.MainActivity2
+import com.example.khind.fragmentActivity2.bottom_nav.status.StatusAlert
 
 
 class Alerts : Fragment() {
-    lateinit var details_button: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -40,8 +35,8 @@ class Alerts : Fragment() {
         listview.isClickable = true
         listview?.adapter = AlertsAdapter(requireContext(),R.layout.row_alerts,list)
         listview.setOnItemClickListener { parent, view, position, id ->
-            val time = list[position].time
 
+            val time = list[position].time
             val intent = Intent(requireContext(), DetailsActivity::class.java)
             intent.putExtra("time", time)
             startActivity(intent)
