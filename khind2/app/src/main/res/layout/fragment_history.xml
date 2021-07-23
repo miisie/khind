@@ -5,9 +5,16 @@
     android:layout_height="match_parent"
     tools:context=".fragmentActivity2.notification.Notifications">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="oi doi oi 3"
-        android:gravity="center"/>
+        >
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/listView_history"
+            tools:listitem="@layout/row_history"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

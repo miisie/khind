@@ -63,7 +63,8 @@
             android:padding="15dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:text="vinova+7@vinova.com.sg">
         </EditText>
 
         <!--password-->
@@ -95,7 +96,8 @@
             android:padding="15dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:text="vinova123">
         </EditText>
 
         <!--login-->

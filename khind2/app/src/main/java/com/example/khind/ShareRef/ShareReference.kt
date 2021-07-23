@@ -153,6 +153,13 @@ class ShareReference(val context: Context) {
     }
     fun getLatitude() = LATITUDE.getFloat()
 
+    fun putTime(time :String){
+        TIME.put(time)
+    }
+    fun getTime() = TIME.getString()
+
+
+
 
     fun clear() {
         editor.clear()

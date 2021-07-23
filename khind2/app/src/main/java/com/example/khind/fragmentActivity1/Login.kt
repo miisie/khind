@@ -15,11 +15,11 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.khind.PASSWORD
+
 import com.example.khind.PREFERENCE_NAME
 import com.example.khind.R
 import com.example.khind.ShareRef.ShareReference
-import com.example.khind.USERNAME
+
 import com.example.khind.ViewModels.ActivityViewModel
 
 

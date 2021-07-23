@@ -192,7 +192,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/inform_clear_text"
-            android:text="Cloud-to-Ground lightning detected"
+            android:text="Cloud-to-Ground no lightning detected"
             android:textColor="	#9DD31C"
             android:background="@drawable/inform_clear_background"
             android:padding="8dp"

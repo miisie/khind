@@ -14,9 +14,6 @@ import com.example.khind.Model.model.database.RefreshToken.Refresh
 import com.example.khind.Model.model.database.Sensors.Sensor
 import com.example.khind.Model.model.database.SensorsID.SensorID
 import com.example.khind.Model.model.database.SignIn.Signin
-import com.example.khind.PASSWORD
-
-import com.example.khind.USERNAME
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
