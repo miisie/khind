@@ -12,6 +12,7 @@ import com.example.khind.R
 import com.example.khind.ShareRef.ShareReference
 import com.example.khind.fragmentActivity2.notification.Notifications
 
+
 class Details : Fragment() {
     lateinit var backdetailbutton: Button
     val ShareReference by lazy { ShareReference(requireContext()) }
@@ -40,5 +41,6 @@ class Details : Fragment() {
             fragmentTransaction?.addToBackStack(null)
             fragmentTransaction?.commit()
         }
+
     }
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/DashBoard"
+            android:title="DashBoard" />
+        <item
+            android:id="@+id/Notifications"
+            android:title="Notifications" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/MyProfile"
+            android:title="My Profile" />
+        <item
+            android:id="@+id/Settings"
+            android:title="Settings" />
+        <item
+            android:id="@+id/Support"
+            android:title="Support" />
+    </group>
+
+</menu>

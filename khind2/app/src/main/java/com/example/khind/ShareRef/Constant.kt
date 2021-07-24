@@ -8,4 +8,5 @@ var ALARM = "ALARM"
 var LONGITUDE = "LONGITUDE"
 var LATITUDE = "LATITUDE"
 var TIME = "TIME"
+var CHECK = "0"
 

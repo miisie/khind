@@ -158,6 +158,11 @@ class ShareReference(val context: Context) {
     }
     fun getTime() = TIME.getString()
 
+    fun putCheck(check :String){
+        CHECK.put(check)
+    }
+    fun getCheck() = CHECK.getString()
+
 
 
 
