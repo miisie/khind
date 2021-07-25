@@ -1,4 +1,4 @@
-package com.example.khind.fragmentActivity2.nav_drawer.myprofileFragement
+package com.example.khind.fragmentActivity2.nav_drawer
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,12 +10,12 @@ import androidx.fragment.app.FragmentManager
 import com.example.khind.R
 import kotlinx.android.synthetic.main.app_bar_home.*
 
+class SupportFragment : Fragment() {
+    private lateinit var button_back : Button
 
-class ChangePasswordFragment : Fragment() {
-    private lateinit var back_button: Button
-    private lateinit var update_button: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
 
     override fun onCreateView(
@@ -23,24 +23,21 @@ class ChangePasswordFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_change_password, container, false)
+        return inflater.inflate(R.layout.fragment_support, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        activity?.toolbar1?.visibility = View.GONE
         super.onViewCreated(view, savedInstanceState)
-        back_button = view.findViewById(R.id.btnbackprofile)
-        update_button = view.findViewById(R.id.update)
-        back_button.setOnClickListener {
+        activity?.toolbar1?.visibility = View.GONE
+        activity?.Bottom_navigationBar?.visibility = View.GONE
+        activity?.below_toolbar1?.visibility = View.GONE
+        button_back = view.findViewById(R.id.btnbackabout)
+        button_back.setOnClickListener {
+            activity?.Bottom_navigationBar?.visibility = View.VISIBLE
             activity?.toolbar1?.visibility = View.VISIBLE
+            activity?.below_toolbar1?.visibility = View.VISIBLE
             if(fragmentManager?.backStackEntryCount!! > 0) {
-                fragmentManager?.popBackStack("profile", FragmentManager.POP_BACK_STACK_INCLUSIVE)
-            }
-        }
-        update_button.setOnClickListener {
-            activity?.toolbar1?.visibility = View.VISIBLE
-            if(fragmentManager?.backStackEntryCount!! > 0) {
-                fragmentManager?.popBackStack("profile", FragmentManager.POP_BACK_STACK_INCLUSIVE)
+                fragmentManager?.popBackStack("Support", FragmentManager.POP_BACK_STACK_INCLUSIVE)
             }
         }
     }

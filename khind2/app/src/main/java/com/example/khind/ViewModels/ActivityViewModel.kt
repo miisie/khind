@@ -147,25 +147,20 @@ class ActivityViewModel(): ViewModel() {
             })
     }
 
-    fun signinViewModelObserve(username: String, password: String): LiveData<Signin>?{
-        SignIn(username,password)
+    fun signinViewModelObserve(): LiveData<Signin>?{
         return signinViewModel
     }
 
-    fun sensorsViewModelObserve(token: String): LiveData<Sensor>?{
-        GetSensor(token)
+    fun sensorsViewModelObserve(): LiveData<Sensor>?{
         return sensorsViewModel
     }
-    fun sensorIDViewModelObserve(token: String, id:String): LiveData<SensorID>?{
-        GetSensorID(token,id)
+    fun sensorIDViewModelObserve(): LiveData<SensorID>?{
         return sensorIDViewModel
     }
-    fun refreshViewModelObserve(token: String,refreshtoken:String): LiveData<Refresh>?{
-        RefreshToken(token,refreshtoken)
+    fun refreshViewModelObserve(): LiveData<Refresh>?{
         return refreshViewModel
     }
-    fun messagesViewModelObserve(context: Context): LiveData<Message>? {
-
+    fun messagesViewModelObserve(): LiveData<Message>? {
         return messagesViewModel
     }
 }

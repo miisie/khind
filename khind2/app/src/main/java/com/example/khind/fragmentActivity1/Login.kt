@@ -60,7 +60,8 @@ class Login : Fragment() {
         login.setOnClickListener {
             Username = username.text.toString()
             Password = password.text.toString()
-            LoginViewModel.signinViewModelObserve(Username,Password)!!.observe(viewLifecycleOwner, Observer {
+            LoginViewModel.SignIn(Username,Password)
+            LoginViewModel.signinViewModelObserve()!!.observe(viewLifecycleOwner, Observer {
                 if (it.statusLogin == true){
                     ShareReference.putToken(it.data.token.tokenUse,it.data.token.refresh_token)
                     val fragmentTransaction= fragmentManager?.beginTransaction()

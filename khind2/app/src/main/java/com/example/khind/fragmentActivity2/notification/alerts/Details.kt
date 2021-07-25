@@ -37,7 +37,7 @@ class Details : Fragment() {
         backdetailbutton = view.findViewById(R.id.backbutton_details)
         backdetailbutton.setOnClickListener {
             val fragmentTransaction= fragmentManager?.beginTransaction()
-            fragmentTransaction?.replace(R.id.frame_layout_id2, Notifications())
+            fragmentTransaction?.replace(R.id.frame_layout_drawer, Notifications())
             fragmentTransaction?.addToBackStack(null)
             fragmentTransaction?.commit()
         }

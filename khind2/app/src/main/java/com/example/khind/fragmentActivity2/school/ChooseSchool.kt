@@ -9,6 +9,9 @@ import android.widget.Button
 import androidx.fragment.app.FragmentManager
 import com.example.khind.R
 import com.example.khind.ShareRef.ShareReference
+import com.example.khind.fragmentActivity2.bottom_nav.Status
+import com.example.khind.fragmentActivity2.bottom_nav.history.History
+import kotlinx.android.synthetic.main.app_bar_home.*
 
 
 class ChooseSchool : Fragment() {
@@ -31,9 +34,13 @@ class ChooseSchool : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         backbutton = view.findViewById(R.id.down_vector)
         backbutton.setOnClickListener{
-            if(fragmentManager?.backStackEntryCount!! > 0 ) {
-                fragmentManager?.popBackStack("Bot_Nav", FragmentManager.POP_BACK_STACK_INCLUSIVE)
-            }
+            activity?.toolbar1?.visibility = View.VISIBLE
+            activity?.Bottom_navigationBar?.visibility = View.VISIBLE
+            activity?.below_toolbar1?.visibility = View.VISIBLE
+            val fragmentTransaction= fragmentManager?.beginTransaction()
+            fragmentTransaction?.replace(R.id.frame_layout_drawer, Status())
+            fragmentTransaction?.addToBackStack(null)
+            fragmentTransaction?.commit()
         }
     }
 }

@@ -1,8 +1,8 @@
 package com.example.khind.fragmentActivity2.notification.alerts
 
-import android.content.Intent
+
 import android.os.Bundle
-import android.os.Handler
+
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,10 +10,7 @@ import android.view.ViewGroup
 import android.widget.ListView
 import com.example.khind.R
 import com.example.khind.ShareRef.ShareReference
-import com.example.khind.fragmentActivity1.Login
-import com.example.khind.fragmentActivity2.MainActivity2
-import com.example.khind.fragmentActivity2.bottom_nav.status.StatusAlert
-import com.example.khind.fragmentActivity2.bottom_nav.status.StatusClear
+import kotlinx.android.synthetic.main.app_bar_home.*
 
 
 class Alerts : Fragment() {
@@ -40,14 +37,15 @@ class Alerts : Fragment() {
         listview.isClickable = true
         listview?.adapter = AlertsAdapter(requireContext(),R.layout.row_alerts,list)
         listview.setOnItemClickListener { parent, view, position, id ->
-
             val time = list[position].time
             ShareReference.putTime(time)
-
-                val fragmentTransaction= fragmentManager?.beginTransaction()
-                fragmentTransaction?.replace(R.id.frame_layout_id2, Details())
-                fragmentTransaction?.addToBackStack("alerts")
-                fragmentTransaction?.commit()
+            activity?.toolbar1?.visibility = View.GONE
+            activity?.Bottom_navigationBar?.visibility = View.GONE
+            activity?.below_toolbar1?.visibility = View.GONE
+            val fragmentTransaction= fragmentManager?.beginTransaction()
+            fragmentTransaction?.replace(R.id.frame_layout_drawer, Details())
+            fragmentTransaction?.addToBackStack("alerts")
+            fragmentTransaction?.commit()
 
         }
     }
@@ -63,8 +61,11 @@ class Alerts : Fragment() {
         listview?.setOnItemClickListener { parent, view, position, id ->
             val time = list[position].time
             ShareReference.putTime(time)
+            activity?.toolbar1?.visibility = View.GONE
+            activity?.Bottom_navigationBar?.visibility = View.GONE
+            activity?.below_toolbar1?.visibility = View.GONE
             val fragmentTransaction= fragmentManager?.beginTransaction()
-            fragmentTransaction?.replace(R.id.frame_layout_id2, Details())
+            fragmentTransaction?.replace(R.id.frame_layout_drawer, Details())
             fragmentTransaction?.addToBackStack("alerts")
             fragmentTransaction?.commit()
         }
